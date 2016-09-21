@@ -16,7 +16,7 @@ tgsyscom = TelegramBot.new(token: ARGV[0])
 # Processing every message the bot recieves
 tgsyscom.get_updates(fail_silently: true) do |message|
   message.reply do |reply|
-    reply.text = `#{ARGV[1]} #{message.text} 2>&1`      # Reply with the output of the command specified in the argument, with the sent message as parameter
+    reply.text = `#{ARGV[1]} #{message.text.slice! message.text[/(((?<!\\)(<|>|\|))|[0-9]+(?=(?<!\\)(<|>|\|)))(.*)/]} 2>&1`      # Reply with the output of the command specified in the argument, with the sent message as parameter
     reply.send_with(tgsyscom)
   end
 end

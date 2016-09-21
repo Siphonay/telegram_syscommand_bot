@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # coding: utf-8
 # telegram_syscommand_bot: a Telegram bot to interact with a specified system command
-# Written in Ruby by Alexis  « Sam » « Siphoné » Viguié on the 21-09-2016
+# Written in Ruby by Alexis « Sam » « Siphoné » Viguié on the 21-09-2016
 # No license applied
 
 # Loading the required gem to make use of Telegram's bot API

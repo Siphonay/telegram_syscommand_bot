@@ -8,7 +8,7 @@
 require 'telegram_bot'
 
 # Exiting the program if not enough arguments are specified
-abort "please specify a telegram bot api token and a system command in argument." unless ARGV.size < 2
+abort "please specify a telegram bot api token and a system command in argument." unless ARGV.size == 2
 
 # Use the token passed in argument
 tgsyscom = TelegramBot.new(token: ARGV[0])
